@@ -4,4 +4,5 @@ export interface Card {
     image: string;
     species: string;
     gender: string;
+    isSold?: boolean; 
   }

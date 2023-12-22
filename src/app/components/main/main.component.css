@@ -46,3 +46,8 @@ header > img:hover {
 .card > p {
     font-size: 20px;
 }
+
+button.disabled {
+    cursor: default;
+    background-color: #999;
+}

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CardsService } from 'src/app/cards.service';
+import { CartService } from 'src/app/cart.service';
 
 @Component({
   selector: 'app-main',
@@ -12,7 +13,7 @@ export class MainComponent implements OnInit {
 
   @Output() updateScreen: EventEmitter<string> = new EventEmitter<string>;
 
-  constructor(private cardService: CardsService) {}
+  constructor(private cardService: CardsService, private cartService: CartService) {}
 
   ngOnInit(): void {
     this.getCardsFromApi();
@@ -39,4 +40,10 @@ export class MainComponent implements OnInit {
     this.updateScreen.emit(newScreen)
   }
 
+  addToCart(card: any){
+    if (!card.isSold) {
+      this.cartService.addToCart(card);
+      card.isSold = true;
+    }
+  }
 }

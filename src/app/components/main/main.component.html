@@ -13,7 +13,7 @@
             <p>{{card.species}}</p>
             <p>{{card.gender}}</p>
 
-            <button>{{ card.price | currency}}</button>
+            <button (click)="addToCart(card)" [ngClass]="card.isSold ? 'disabled' : ''">{{ card.isSold ? 'Sold' : card.price | currency }}</button>
         </div>
     </div>
 </main>
