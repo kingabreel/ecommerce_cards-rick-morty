@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d82b2b;
+    height: 80px;
+}
+
+header > img {
+    cursor: pointer;
+}
+
+header > img:hover {
+    background-color: #bd2525;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid #ccc;
+    width: 70%;
+}
+
+.card > h1 {
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.card > p {
+    font-size: 20px;
+}

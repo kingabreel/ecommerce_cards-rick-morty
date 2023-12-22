@@ -9,6 +9,7 @@ import { CardsService } from 'src/app/cards.service';
 
 export class MainComponent implements OnInit {
   cards: any[] = [];
+  prices: number[] = [];
 
   constructor(private cardService: CardsService) {}
 
@@ -18,8 +19,19 @@ export class MainComponent implements OnInit {
 
   getCardsFromApi() {
     this.cardService.getCards().subscribe((data: any) => {
-      this.cards = data;
-      console.log(data);
+      this.cards = data.results.map((result: any) => ({
+        id: result.id,
+        name: result.name,
+        image: result.image,
+        species: result.species,
+        gender: result.gender,
+        price: this.getRandomPrice(30, 100),
+      }));
     });
   }
+
+  private getRandomPrice(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  
 }
