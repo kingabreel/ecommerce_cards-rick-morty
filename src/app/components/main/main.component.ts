@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CardsService } from 'src/app/cards.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { CardsService } from 'src/app/cards.service';
 
 export class MainComponent implements OnInit {
   cards: any[] = [];
-  prices: number[] = [];
+
+  @Output() updateScreen: EventEmitter<string> = new EventEmitter<string>;
 
   constructor(private cardService: CardsService) {}
 
@@ -34,4 +35,8 @@ export class MainComponent implements OnInit {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
   
+  changeScreen(newScreen: string){
+    this.updateScreen.emit(newScreen)
+  }
+
 }

@@ -29,6 +29,11 @@ header > img:hover {
     margin: auto;
     border: 1px solid #ccc;
     width: 70%;
+    border-radius: 4px;
+}
+
+.card:hover {
+    background-color: #f1f1f1;
 }
 
 .card > h1 {

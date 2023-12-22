@@ -6,13 +6,15 @@ import { MainComponent } from './components/main/main.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { AccountComponent } from './components/account/account.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     PaymentComponent,
-    AccountComponent
+    AccountComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

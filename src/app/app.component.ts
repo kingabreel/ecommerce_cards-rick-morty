@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'book';
 
+  screen: string = 'main';
+
+  updateScreen(screen: string) {
+    this.screen = screen;
+  }
 }
