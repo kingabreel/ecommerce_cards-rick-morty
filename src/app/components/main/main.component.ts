@@ -11,8 +11,6 @@ import { CartService } from 'src/app/cart.service';
 export class MainComponent implements OnInit {
   cards: any[] = [];
 
-  @Output() updateScreen: EventEmitter<string> = new EventEmitter<string>;
-
   constructor(private cardService: CardsService, private cartService: CartService) {}
 
   ngOnInit(): void {
@@ -34,10 +32,6 @@ export class MainComponent implements OnInit {
 
   private getRandomPrice(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1) + min);
-  }
-  
-  changeScreen(newScreen: string){
-    this.updateScreen.emit(newScreen)
   }
 
   addToCart(card: any){

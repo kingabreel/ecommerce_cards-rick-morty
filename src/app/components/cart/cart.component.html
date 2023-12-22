@@ -1,1 +1,18 @@
-<p (click)="show()">cart works!</p>
+<div class="cart-container">
+    <div class="cart-item" *ngFor="let item of cart">
+        <img src="{{item.image}}">
+        <p>{{item.name}}</p>
+        <p>{{item.price | currency}}</p>
+        <button (click)="removeItem(item)">Remover</button>
+    </div>
+
+    <div class="total">
+        <div class="text">
+            <p>Total: </p>
+            <p>{{ sum | currency }}</p>
+    
+        </div>
+
+        <button [ngClass]="{'disabled': emptyCart}">{{ emptyCart ? 'Carrinho vazio' : 'Prosseguir'}}</button>
+    </div>
+</div>

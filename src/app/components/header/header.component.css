@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d82b2b;
+    height: 80px;
+}
+
+header > img {
+    cursor: pointer;
+}
+
+header > img:hover {
+    background-color: #bd2525;
+}

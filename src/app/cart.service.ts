@@ -17,6 +17,12 @@ export class CartService {
     this.cart.push(card);
   }
 
+  removeFromCart(index: number){
+    if (index >= 0 && index < this.cart.length) {
+      this.cart.splice(index, 1);
+    }
+  }
+
   clearCart() {
     this.cart = [];
   }

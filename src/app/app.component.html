@@ -1,4 +1,5 @@
 <div class="main" >
-    <app-main *ngIf="screen == 'main'" (updateScreen)="updateScreen($event)"></app-main>
+    <app-header (updateScreen)="updateScreen($event)"></app-header>
+    <app-main *ngIf="screen == 'main'"></app-main>
     <app-cart *ngIf="screen == 'cart'"></app-cart>
 </div>
