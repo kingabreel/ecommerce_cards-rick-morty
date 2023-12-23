@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { ConfigComponent } from './components/config/config.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     PaymentComponent,
     AccountComponent,
     CartComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConfigComponent
   ],
   imports: [
     BrowserModule,

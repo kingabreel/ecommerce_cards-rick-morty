@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'book';
 
-  screen: string = 'main';
+  screen: string = 'payment';
 
   updateScreen(screen: string) {
     this.screen = screen;
